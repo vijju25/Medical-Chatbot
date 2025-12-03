@@ -7,6 +7,7 @@ logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s')
 list_of_files = [
     "src/__init__.py",
     "src/helper.py",
+    "src/prompt.py",
     ".env",
     "setup.py",
     "app.py",
@@ -19,12 +20,12 @@ for filepath in list_of_files:
     
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
-        logging.info(f"Created directory: {filedir} for file: {filename} - template.py:22")
+        logging.info(f"Created directory: {filedir} for file: {filename} - template.py:23")
     
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, "w") as f:
             pass
-        logging.info(f"Created empty file: {filename} - template.py:27")
+        logging.info(f"Created empty file: {filename} - template.py:28")
         
     else:
-        logging.info(f"File already exists and is not empty: {filename} - template.py:30")
+        logging.info(f"File already exists and is not empty: {filename} - template.py:31")
