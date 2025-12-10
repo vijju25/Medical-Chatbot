@@ -1,10 +1,14 @@
-from setuptools import setup, find_packages
-
 setup(
-    name="Generative AI Oroject",
-    version="0.0.0",
+    name="Generative AI Project",
+    version="0.0.1",
     author="Vijay",
     author_email="jakkavijayreddy@gmail.com",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+        "langchain",
+        "pinecone-client",
+        "python-dotenv",
+        "PyMuPDF",
+        "sentence-transformers"
+    ],
 )
